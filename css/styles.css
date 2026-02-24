@@ -16,6 +16,17 @@
     --white: #ffffff;
 }
 
+html[data-theme="dark"] {
+    --text-color: #f2f2f2;
+    --text-secondary: #b0b0b0;
+    --bg-color: #121212;
+    --primary-color: #9a9bb0;
+}
+
+html[data-theme="dark"] main section {
+    background-color: #1e1e1e;
+}
+
 /* =========================
    Basic Reset & Typography
    ========================= */
@@ -34,6 +45,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* =========================
@@ -61,7 +73,7 @@ header p {
 }
 
 nav {
-    background-color: #3d1461;
+    background-color: #001a33;
     padding: 0.75rem;
     display: flex;              /* Make nav a flex container */
     justify-content: center;    /* Center the ul inside nav */
@@ -97,6 +109,28 @@ nav a {
 
 nav a:hover {
     background-color: var(--primary-color);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: #001a33;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .theme-toggle {
+    background-color: white;
+    color: #001a33;
 }
 
 /* =========================
@@ -170,6 +204,25 @@ main section li {
 
 /* Figure captions */
 .viz-container figcaption {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Image card styling */
+.image-card {
+    text-align: center;
+}
+
+.image-card img {
+    max-width: 30%;            /* Make images much smaller */
+    height: auto;              /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-card figcaption {
     font-style: italic;
     color: var(--text-secondary);
     font-size: 0.9rem;

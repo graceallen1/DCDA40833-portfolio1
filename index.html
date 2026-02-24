@@ -18,6 +18,9 @@
             <li><a href="lab04.html">Tableau Viz</a></li>
             <li><a href="lab05.html">Lab 5</a></li>
             <li><a href="hometown-map.html">Hometown Map</a></li>
+            <button id="themeToggle" class="theme-toggle">
+Dark Mode
+</button>
         </ul>
     </nav>
 
@@ -114,5 +117,22 @@
         <p><a href="https://github.com/graceallen1/DCDA40833-PORTFOLIO1">View Repository on GitHub</a></p>
         <p>&copy; 2026 Grace Allen | DCDA 40833 | TCU</p>
     </footer>
+    <script>
+const button = document.getElementById("themeToggle");
+
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  document.documentElement.setAttribute("data-theme", savedTheme);
+}
+
+button.addEventListener("click", () => {
+  const current = document.documentElement.getAttribute("data-theme");
+  const newTheme = current === "dark" ? "light" : "dark";
+
+  document.documentElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+});
+</script>
 </body>
 </html>
