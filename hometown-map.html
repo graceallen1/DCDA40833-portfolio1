@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hometown Map - Interactive Folium visualization">
+    <meta name="author" content="Grace Allen">
+    <title>Hometown Map | Grace Allen Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+            <li><a href="lab03.html">Tufte Critique</a></li>
+            <li><a href="lab04.html">Tableau Viz</a></li>
+            <li><a href="lab05.html">Lab 5</a></li>
+            <li><a href="hometown-map.html">Hometown Map</a></li>
+            <button id="themeToggle" class="theme-toggle">
+Dark Mode
+</button>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Hometown Map</h1>
+        <p>Interactive Folium Map | Kansas City Area</p>
+    </header>
+
+    <main>
+        <!-- Interactive Map Section -->
+        <section>
+            <h2>My Hometown in Kansas City</h2>
+            <p>Explore the meaningful locations from my hometown. Click on the markers to learn more about places that are important to me.</p>
+            
+            <div class="viz-container">
+                <iframe src="lab6_hometown_map.html"
+                        width="100%"
+                        height="600"
+                        style="border:none; border-radius: 8px;">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Reflection Section -->
+        <section>
+            <h2>Reflection</h2>
+            <p>For Lab 6, I worked on creating a custom map in Mapbox and adding a dataset of locations from my hometown, Kansas City. I chose places in Kansas City and Prairie Village that are personally meaningful to me and that I would show someone visiting for the first time. I technically am from the Kansas side of Kansas City but I am right on stateline, so this map includes places from both Missouri and Kansas. These included places like Shawnee Mission East High School, Meadowbrook Park, the Nelson-Atkins Museum of Art, and a few restaurants and coffee shops that my family and friends go to often. It was interesting to think about how mapping can be used not just for navigation but also as a way to tell a story about a place and the experiences tied to it.</p>
+
+            <p>One of the more challenging parts of the lab was getting my CSV file formatted correctly so that Mapbox could read the location data. I first assumed that simply including addresses would work automatically, but I had to make sure that Mapbox recognized the address column properly during the upload process. After working through that and uploading the dataset through the Data Manager, I was able to add the locations to my map style and see the points appear on the map. Once everything was working, it was satisfying to see the map visualize places that are meaningful to me in my hometown.</p>
+
+            <p>Another part of the lab that I enjoyed was customizing the basemap style itself. Changing colors and adjusting the visual design made me realize how much the style of a map can affect how information is interpreted. Even small changes to colors, labels, or emphasis can make the map more personal to me. Designing a map also made me think about how cartographers and designers make decisions about what information should stand out and what should remain in the background.</p>
+
+            <p>This lab helped me better understand how spatial data and design work together. Before this assignment, I mostly thought of maps as something static that you just view online. Through this process, I learned that maps are actually highly customizable tools that combine data, design, and technology. Being able to import my own dataset and visualize it on a custom map showed how mapping platforms like Mapbox can be used for storytelling, data visualization, and interactive experiences.</p>
+
+            <p>Overall, Lab 6 helped me gain more confidence working with geospatial data and map styling tools. It also reinforced how digital tools can be used to represent personal experiences and places in a visual format. Seeing my hometown locations appear on the map made the project feel more meaningful and helped me better understand how mapping can be used as a creative and analytical tool.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Grace Allen | DCDA 40833 Skills Portfolio</p>
+        <p><a href="index.html">Back to Home</a></p>
+    </footer>
+
+    <script>
+        // Dark mode functionality
+        const themeToggle = document.getElementById("themeToggle");
+        const html = document.documentElement;
+
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem("theme") || "light";
+        html.setAttribute("data-theme", currentTheme);
+        updateButtonText();
+
+        // Toggle theme
+        themeToggle.addEventListener("click", () => {
+            const theme = html.getAttribute("data-theme");
+            const newTheme = theme === "light" ? "dark" : "light";
+            html.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+            updateButtonText();
+        });
+
+        function updateButtonText() {
+            const theme = html.getAttribute("data-theme");
+            themeToggle.textContent = theme === "light" ? "Dark Mode" : "Light Mode";
+        }
+    </script>
+</body>
+</html>

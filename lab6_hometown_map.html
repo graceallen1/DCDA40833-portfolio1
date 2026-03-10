@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5f97f025942f85abe759d35b05efe08a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5f97f025942f85abe759d35b05efe08a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5f97f025942f85abe759d35b05efe08a = L.map(
+                "map_5f97f025942f85abe759d35b05efe08a",
+                {
+                    center: [39.0132548, -94.6164362],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f3edd38c8c8e818748f8a6252d26b7a1 = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/grace-allen/cmm3r0tut00i501qz31ix4mt3/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ3JhY2UtYWxsZW4iLCJhIjoiY21tMHZjOXpuMDM0bjJwcHJhY3N3NGo0ZCJ9.-4aVRpJL842xmrqxNs7mEA",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Map data \u00a9 OpenStreetMap contributors | Imagery \u00a9 Mapbox",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f3edd38c8c8e818748f8a6252d26b7a1.addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var marker_a449004c138a4bfe8a5a515e4c7a6d40 = L.marker(
+                [38.99211, -94.63124],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_c4d125fc81797d0cf25a71219a9e9414 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "education",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cebfdd2bfd9882ecb829a33c8950ae7a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e09d94bee11997ca4299c95d839a9624 = $(`<div id="html_e09d94bee11997ca4299c95d839a9624" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">Shawnee Mission East High School</h3>         <p><strong>Type:</strong> School</p>         <p>This is where I went to high school and met so many of my best friends, this school means a lot to me because of the friends I made and the nostalgia from it. </p>         <img src="https://images.johnsoncountypost.com/wp-content/uploads/2020/04/SM_East_Campus.jpg" alt="Shawnee Mission East High School" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_cebfdd2bfd9882ecb829a33c8950ae7a.setContent(html_e09d94bee11997ca4299c95d839a9624);
+            
+        
+
+        marker_a449004c138a4bfe8a5a515e4c7a6d40.bindPopup(popup_cebfdd2bfd9882ecb829a33c8950ae7a)
+        ;
+
+        
+    
+    
+            marker_a449004c138a4bfe8a5a515e4c7a6d40.bindTooltip(
+                `<div>
+                     Shawnee Mission East High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a449004c138a4bfe8a5a515e4c7a6d40.setIcon(icon_c4d125fc81797d0cf25a71219a9e9414);
+            
+    
+            var marker_6b51031342a3ebeefd72e2dda18f0281 = L.marker(
+                [39.034777, -94.587127],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_40d4c8c0caa38f33a65484a91bf335eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0823b43bfc238148f555d535bd74a85 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8522b27675fc61357c55ace5cbbd7fb6 = $(`<div id="html_8522b27675fc61357c55ace5cbbd7fb6" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">Osteria Il Centro</h3>         <p><strong>Type:</strong> Restaurant</p>         <p>Il Centro has always been a family favorite and is the best Italian food in Kansas City. The resteraunt is cozy and the service is incredible, seriously one of the best in the KC area. </p>         <img src="https://romanticspotskansascity.com/wp-content/uploads/2023/07/Osteria-Il-Centro-KC.jpeg" alt="Osteria Il Centro" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_a0823b43bfc238148f555d535bd74a85.setContent(html_8522b27675fc61357c55ace5cbbd7fb6);
+            
+        
+
+        marker_6b51031342a3ebeefd72e2dda18f0281.bindPopup(popup_a0823b43bfc238148f555d535bd74a85)
+        ;
+
+        
+    
+    
+            marker_6b51031342a3ebeefd72e2dda18f0281.bindTooltip(
+                `<div>
+                     Osteria Il Centro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b51031342a3ebeefd72e2dda18f0281.setIcon(icon_40d4c8c0caa38f33a65484a91bf335eb);
+            
+    
+            var marker_c9b20464d253fc5dc679c52cd3da5704 = L.marker(
+                [39.040513, -94.598904],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_a5f16b8e85eb91412622462023c86d84 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "heart",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69bffd4e55f5dc10e3102a9608bc5606 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_40d32d92d02bd07e3dd8688485f176ed = $(`<div id="html_40d32d92d02bd07e3dd8688485f176ed" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">PowerLife South Plaza</h3>         <p><strong>Type:</strong> Workout</p>         <p>PowerLife is one of my favorite workout spots when I’m home. I love this location because its right next to the plaza, it’s a great place to get a workout in closer to the city. </p>         <img src="https://powerlife.com/wp-content/uploads/2018/06/South-Plaza-Storefront-2018.jpg" alt="PowerLife South Plaza" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_69bffd4e55f5dc10e3102a9608bc5606.setContent(html_40d32d92d02bd07e3dd8688485f176ed);
+            
+        
+
+        marker_c9b20464d253fc5dc679c52cd3da5704.bindPopup(popup_69bffd4e55f5dc10e3102a9608bc5606)
+        ;
+
+        
+    
+    
+            marker_c9b20464d253fc5dc679c52cd3da5704.bindTooltip(
+                `<div>
+                     PowerLife South Plaza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9b20464d253fc5dc679c52cd3da5704.setIcon(icon_a5f16b8e85eb91412622462023c86d84);
+            
+    
+            var marker_0fd2e683f61d60ff8d076aa937daccc5 = L.marker(
+                [39.01466, -94.59082],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_fe867c1c8695850e0e8900ce23af6c27 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "coffee",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b617797184590e77b689c6e371c13a43 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4bfee2ddf1d8df3496d6599199e4bbaa = $(`<div id="html_4bfee2ddf1d8df3496d6599199e4bbaa" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">The Roasterie Café – Brookside</h3>         <p><strong>Type:</strong> Cafe</p>         <p>The Roasterie in Brookside has forever and always will be my favorite coffee shop. 16oz Iced Almond Milk Latte is the best order and the occasional spirnkle donut. </p>         <img src="https://sarahsnodgrass.com/blog/wp-content/uploads/2011/11/roasteriefront.jpg" alt="The Roasterie Café – Brookside" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_b617797184590e77b689c6e371c13a43.setContent(html_4bfee2ddf1d8df3496d6599199e4bbaa);
+            
+        
+
+        marker_0fd2e683f61d60ff8d076aa937daccc5.bindPopup(popup_b617797184590e77b689c6e371c13a43)
+        ;
+
+        
+    
+    
+            marker_0fd2e683f61d60ff8d076aa937daccc5.bindTooltip(
+                `<div>
+                     The Roasterie Café – Brookside
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0fd2e683f61d60ff8d076aa937daccc5.setIcon(icon_fe867c1c8695850e0e8900ce23af6c27);
+            
+    
+            var marker_99c8ef82a6826e22d2264b28a2124f0e = L.marker(
+                [39.041961, -94.59262],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_0a370a1d360fbbb2313bbdd7b28805a5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5d02e8d6998d2c8bbedc589cef812a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_08b2e20825040a156d299f47e23ff797 = $(`<div id="html_08b2e20825040a156d299f47e23ff797" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">Country Club Plaza</h3>         <p><strong>Type:</strong> Shopping</p>         <p>Town Center has always been a go-to for shopping, errands, and resteraunts. It’s a staple for me and my friends at home and has so many great stores. </p>         <img src="https://flatlandkc.org/assets/uploads/2020/11/Plaza-Lights-1-web.jpg" alt="Country Club Plaza" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_c5d02e8d6998d2c8bbedc589cef812a9.setContent(html_08b2e20825040a156d299f47e23ff797);
+            
+        
+
+        marker_99c8ef82a6826e22d2264b28a2124f0e.bindPopup(popup_c5d02e8d6998d2c8bbedc589cef812a9)
+        ;
+
+        
+    
+    
+            marker_99c8ef82a6826e22d2264b28a2124f0e.bindTooltip(
+                `<div>
+                     Country Club Plaza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99c8ef82a6826e22d2264b28a2124f0e.setIcon(icon_0a370a1d360fbbb2313bbdd7b28805a5);
+            
+    
+            var marker_662632b6a341d7a80c84f34a7aa11afd = L.marker(
+                [38.96331, -94.6476],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_4addcca7ce4aacb21f6ac9c75ec2687e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "tree-conifer",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_deadeaada8c71af38e6d583d3dfc1668 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38958d0d6fa17cb0010f4ae02db676a6 = $(`<div id="html_38958d0d6fa17cb0010f4ae02db676a6" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">Meadowbrook Park</h3>         <p><strong>Type:</strong> Park</p>         <p>Meadowbrook Park is one of the prettiest outdoor spots in Prairie Village. I love going on walks or runs there and the Meadowbrook coffee shop and resteraunt is also amazing to stop in before or after a walk. </p>         <img src="https://i.vimeocdn.com/video/1173420997-c013974c4257080235d2db9dc7261521ed3f0833ce3ec5f790f2e91a8695fe0a-d?f=webp" alt="Meadowbrook Park" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_deadeaada8c71af38e6d583d3dfc1668.setContent(html_38958d0d6fa17cb0010f4ae02db676a6);
+            
+        
+
+        marker_662632b6a341d7a80c84f34a7aa11afd.bindPopup(popup_deadeaada8c71af38e6d583d3dfc1668)
+        ;
+
+        
+    
+    
+            marker_662632b6a341d7a80c84f34a7aa11afd.bindTooltip(
+                `<div>
+                     Meadowbrook Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_662632b6a341d7a80c84f34a7aa11afd.setIcon(icon_4addcca7ce4aacb21f6ac9c75ec2687e);
+            
+    
+            var marker_729e0aa853d1abe8dc8d1d46db375a21 = L.marker(
+                [39.0039, -94.673073],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_841ec29be8f33ce5a747656dc22ae91c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d626edc90258478ef954e3e4eecd84ca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b967f5ffdd4e28d675282994132ea58b = $(`<div id="html_b967f5ffdd4e28d675282994132ea58b" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">Milburn Country Club</h3>         <p><strong>Type:</strong> Recreation</p>         <p>Milburn has been part of a lot of family events and social memories for me growing up. From growing up swimming and golfing to now coming home to have dinner there and golf from time to time;. </p>         <img src="https://www.milburn.org/Images/Library/milburn_experience_website_small.jpg" alt="Milburn Country Club" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_d626edc90258478ef954e3e4eecd84ca.setContent(html_b967f5ffdd4e28d675282994132ea58b);
+            
+        
+
+        marker_729e0aa853d1abe8dc8d1d46db375a21.bindPopup(popup_d626edc90258478ef954e3e4eecd84ca)
+        ;
+
+        
+    
+    
+            marker_729e0aa853d1abe8dc8d1d46db375a21.bindTooltip(
+                `<div>
+                     Milburn Country Club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_729e0aa853d1abe8dc8d1d46db375a21.setIcon(icon_841ec29be8f33ce5a747656dc22ae91c);
+            
+    
+            var marker_523b5c9ac6f86f0e050faefec15310fa = L.marker(
+                [39.003, -94.631651],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_2210d1a193ae2d1115e0bc6e54b4c8e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0c6aab9b76cb528bf3d201e42537e19 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f0719751fe9e5645f4d7cfe01e80d9d5 = $(`<div id="html_f0719751fe9e5645f4d7cfe01e80d9d5" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">French Market</h3>         <p><strong>Type:</strong> Restaurant</p>         <p>French Market is a Prairie Village favorite that feels both casual and special. I’ve gone there with family and friends for years. It’s one of those hometown spots I always look forward to visiting when I’m back.</p>         <img src="https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/3/27/3275a440-aeed-11e9-907c-6fac90cedb9a/5d39c4a7b1227.image.jpg?resize=666%2C500" alt="French Market" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_c0c6aab9b76cb528bf3d201e42537e19.setContent(html_f0719751fe9e5645f4d7cfe01e80d9d5);
+            
+        
+
+        marker_523b5c9ac6f86f0e050faefec15310fa.bindPopup(popup_c0c6aab9b76cb528bf3d201e42537e19)
+        ;
+
+        
+    
+    
+            marker_523b5c9ac6f86f0e050faefec15310fa.bindTooltip(
+                `<div>
+                     French Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_523b5c9ac6f86f0e050faefec15310fa.setIcon(icon_2210d1a193ae2d1115e0bc6e54b4c8e6);
+            
+    
+            var marker_c9850bcedbed4474e896f094e5c71d90 = L.marker(
+                [38.993261, -94.630408],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_e2ccffae50ecb273dbb60b8dc085a84f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4691eaece0a1fc4395009ce0cd8718e5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_684597a5fc01bf40c5ceed564923ad32 = $(`<div id="html_684597a5fc01bf40c5ceed564923ad32" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">Jun’s Sushi</h3>         <p><strong>Type:</strong> Restaurant</p>         <p>Jun’s is one of my favorite sushi spots back home. It's a bit of a hole in the wall but it never disappoints, the sushi boat is the best to get with a big group. </p>         <img src="https://s3-media0.fl.yelpcdn.com/bphoto/jesWsdLuT0YRSVc2AY551g/258s.jpg" alt="Jun’s Sushi" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_4691eaece0a1fc4395009ce0cd8718e5.setContent(html_684597a5fc01bf40c5ceed564923ad32);
+            
+        
+
+        marker_c9850bcedbed4474e896f094e5c71d90.bindPopup(popup_4691eaece0a1fc4395009ce0cd8718e5)
+        ;
+
+        
+    
+    
+            marker_c9850bcedbed4474e896f094e5c71d90.bindTooltip(
+                `<div>
+                     Jun’s Sushi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9850bcedbed4474e896f094e5c71d90.setIcon(icon_e2ccffae50ecb273dbb60b8dc085a84f);
+            
+    
+            var marker_e0e6a988c00ccdfdd3811936d9f952d4 = L.marker(
+                [39.045056, -94.580919],
+                {
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+        
+    
+            var icon_b00c5522761ed8dfc14dfb2a20ffe8c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkpurple",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99034b2d9aa84dfd9406b470ae909cae = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_08db40406d5c2332958d89885d5f474a = $(`<div id="html_08db40406d5c2332958d89885d5f474a" style="width: 100.0%; height: 100.0%;">     <div style="width:260px;">         <h3 style="margin-bottom:8px;">Nelson-Atkins Museum of Art</h3>         <p><strong>Type:</strong> Museam</p>         <p>The Nelson-Atkins is such an iconic Kansas City landmark that I show to anyone visiting. Not only is the outside stunning but the museam itself is full of culture and art. </p>         <img src="https://theitalianguest.com/wp-content/uploads/2017/04/Nelson-art-gallery1-e1562745230686.jpg" alt="Nelson-Atkins Museum of Art" style="width:100%; border-radius:8px; margin-top:8px;">     </div>     </div>`)[0];
+                popup_99034b2d9aa84dfd9406b470ae909cae.setContent(html_08db40406d5c2332958d89885d5f474a);
+            
+        
+
+        marker_e0e6a988c00ccdfdd3811936d9f952d4.bindPopup(popup_99034b2d9aa84dfd9406b470ae909cae)
+        ;
+
+        
+    
+    
+            marker_e0e6a988c00ccdfdd3811936d9f952d4.bindTooltip(
+                `<div>
+                     Nelson-Atkins Museum of Art
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e0e6a988c00ccdfdd3811936d9f952d4.setIcon(icon_b00c5522761ed8dfc14dfb2a20ffe8c4);
+            
+    
+            var layer_control_6ee17b0f23487429a049e99237362348_layers = {
+                base_layers : {
+                    "Grace Allen Custom Basemap" : tile_layer_f3edd38c8c8e818748f8a6252d26b7a1,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_6ee17b0f23487429a049e99237362348 = L.control.layers(
+                layer_control_6ee17b0f23487429a049e99237362348_layers.base_layers,
+                layer_control_6ee17b0f23487429a049e99237362348_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_5f97f025942f85abe759d35b05efe08a);
+
+        
+</script>
+</html>
