@@ -21,6 +21,7 @@ STYLE_ID = "cmm3r0tut00i501qz31ix4mt3"
 CSV_FILE = "hometown_locations.csv"
 OUTPUT_HTML = "lab6_hometown_map.html"
 
+# Mapbox style URL used to generate the custom basemap
 # Mapbox custom tiles URL for Folium
 tiles_url = f"https://api.mapbox.com/styles/v1/{USERNAME}/{STYLE_ID}/tiles/256/{{z}}/{{x}}/{{y}}@2x?access_token={ACCESS_TOKEN}"
 

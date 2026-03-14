@@ -60,44 +60,55 @@ Dark Mode
             <h2>My Work</h2>
             <p>Click on any card below to view that lab assignment. Focus of actual labs may change over the course of the semester:</p>
 
-            <!-- Portfolio Grid: Cards linking to each lab page -->
-            <div class="portfolio-grid">
+            <!-- Portfolio Carousel: Cards linking to each lab page -->
+            <div class="portfolio-carousel">
+                <button class="carousel-button" id="carouselPrev" aria-label="Previous lab">&#10094;</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
 
                 <!-- Lab 2: AI Tool Evaluation -->
-                <a href="ai-evaluation.html" class="portfolio-card">
+                <a href="ai-evaluation.html" class="portfolio-card carousel-slide">
+                    <img src="images/Gemini.png" alt="Preview of Lab 2 AI Evaluation" class="carousel-preview">
                     <h3>AI Tool Evaluation</h3>
                     <span class="lab-tag">Lab 2</span>
                     <p>Analysis of AI tools and their capabilities, exploring how artificial intelligence is changing digital culture.</p>
                 </a>
 
                 <!-- Lab 3: Tufte Critique -->
-                <a href="tufte-critique.html" class="portfolio-card">
+                <a href="tufte-critique.html" class="portfolio-card carousel-slide">
+                    <img src="images/infographic.jpeg" alt="Preview of Lab 3 Tufte Critique" class="carousel-preview">
                     <h3>Tufte Critique</h3>
                     <span class="lab-tag">Lab 3</span>
                     <p>Critical analysis of a data visualization using Edward Tufte's principles of graphical excellence.</p>
                 </a>
 
                 <!-- Lab 4: Tableau Visualization -->
-                <a href="tableau-visualization.html" class="portfolio-card">
+                <a href="lab04.html" class="portfolio-card carousel-slide">
+                    <img src="https://public.tableau.com/static/images/La/Lab04_17713487631030/Dashboard1/1.png" alt="Preview of Lab 4 Tableau Visualization" class="carousel-preview">
                     <h3>Tableau Visualization</h3>
                     <span class="lab-tag">Lab 4</span>
                     <p>Interactive data visualization created with Tableau Public, exploring patterns in real-world data.</p>
                 </a>
 
                 <!-- Lab 5: Portfolio Enhancement & Debugging -->
-                <a href="lab05.html" class="portfolio-card">
+                <a href="lab05.html" class="portfolio-card carousel-slide">
+                    <img src="images/darkmode.png" alt="Preview of Lab 5 Portfolio Enhancement" class="carousel-preview">
                     <h3>Lab 5</h3>
                     <span class="lab-tag">Lab 5</span>
                     <p>Portfolio enhancement with dark mode feature and debugging with AI assistance.</p>
                 </a>
 
                 <!-- Lab 6: Hometown Map -->
-                <a href="hometown-map.html" class="portfolio-card">
+                <a href="hometown-map.html" class="portfolio-card carousel-slide">
+                    <iframe src="lab6_hometown_map.html" title="Preview of Lab 6 Hometown Map" class="carousel-preview carousel-preview-frame"></iframe>
                     <h3>Hometown Map</h3>
                     <span class="lab-tag">Lab 6</span>
                     <p>Interactive Folium map showcasing meaningful locations from my hometown with personal reflections.</p>
                 </a>
 
+                    </div>
+                </div>
+                <button class="carousel-button" id="carouselNext" aria-label="Next lab">&#10095;</button>
             </div>
         </section>
 
@@ -105,10 +116,15 @@ Dark Mode
         <section id="reflection">
             <h2>Semester Reflection</h2>
             <!-- TODO: After completing all labs, write a reflection on your growth -->
-            <p><strong>What I learned:</strong> [Reflect on the skills you developed across all six labs]</p>
-            <p><strong>Challenges I overcame:</strong> [What was difficult? How did you work through it?]</p>
-            <p><strong>How I grew:</strong> [How did your understanding of digital culture and data analytics evolve?]</p>
-            <p><strong>Looking ahead:</strong> [How will you apply these skills in the future?]</p>
+            <p><strong>What I learned:</strong></p>
+            <p>Through creating my skills portfolio website this semester, I learned the basics of how websites are structured and how different components work together. At the beginning of the semester, I had very little experience working directly with website code, so learning how HTML and CSS function together was an important part of the process. I learned how HTML provides the structure of a webpage by organizing content with headings, paragraphs, images, and links. At the same time, CSS controls how the website looks visually by adjusting things like colors, spacing, fonts, and layout. As I continued working on the portfolio throughout the semester, I became more comfortable editing code in Visual Studio Code and seeing how changes in the code affected the appearance of the website.</p>
+            <p>Another important skill I developed was understanding how GitHub works. I learned how to push my files to a repository and how GitHub Pages can host a live version of my website online. This helped me understand how developers publish websites and share their work publicly. Over time I also learned how to organize files within my project, including keeping images, HTML pages, and stylesheets in the correct folders so everything would display properly on the site.</p>
+            <p>Each lab that I added to my portfolio helped demonstrate a different skill. For example, some labs focused on analyzing data visualizations and embedding graphics, while others involved evaluating AI tools or working with datasets. I also embedded visualizations such as Tableau dashboards and included written reflections explaining each project. By now, my website has become a complete portfolio that shows both the technical work and the written analysis that I completed throughout the course.</p>
+            <p><strong>Challenges I overcame:</strong></p>
+            <p>One of the biggest challenges I faced while creating the website was understanding how different files connect to each other. At times, images would not appear on the page or links between pages would not work correctly. Usually this happened because of something small like a file path error, a typo in the code, or a missing folder reference. These issues were frustrating at first, but they helped me learn how important attention to detail is when writing code.</p>
+            <p>Another challenge was learning how to troubleshoot problems when something did not work as expected. Sometimes I would make a change to the code and the page would not update the way I thought it should. To solve this, I had to experiment with small adjustments, review my code carefully, and test different solutions. Using Live Server in VS Code helped a lot because it allowed me to instantly see the results of changes to my code.</p>
+            <p>I also used AI tools at times to help explain certain coding concepts or identify possible mistakes in my code. However, I still needed to test the suggestions and make sure they actually worked in my project. This process helped me better understand what the code was doing rather than just copying solutions.</p>
+            <p>Overall, building this portfolio helped me become more comfortable working with website development tools and understanding how websites function behind the scenes. While the process involved a lot of trial and error, it ultimately helped me build confidence in my ability to troubleshoot problems and continue learning new technical skills.</p>
         </section>
     </main>
 
@@ -132,6 +148,27 @@ button.addEventListener("click", () => {
 
   document.documentElement.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
+});
+
+const carouselTrack = document.getElementById("carouselTrack");
+const carouselSlides = document.querySelectorAll(".carousel-slide");
+const carouselPrev = document.getElementById("carouselPrev");
+const carouselNext = document.getElementById("carouselNext");
+
+let currentSlide = 0;
+
+function updateCarousel() {
+    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+carouselNext.addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % carouselSlides.length;
+    updateCarousel();
+});
+
+carouselPrev.addEventListener("click", () => {
+    currentSlide = (currentSlide - 1 + carouselSlides.length) % carouselSlides.length;
+    updateCarousel();
 });
 </script>
 </body>
