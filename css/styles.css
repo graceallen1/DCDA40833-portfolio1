@@ -182,6 +182,21 @@ main section p {
     line-height: 1.8;
 }
 
+.resume-button {
+    display: inline-block;
+    background-color: #001a33;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.resume-button:hover {
+    transform: scale(1.03);
+}
+
 /* Lists inside sections */
 main section ul,
 main section ol {
